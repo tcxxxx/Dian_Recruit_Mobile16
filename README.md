@@ -1,1 +1,1 @@
-# Dian_Recruit_Mobile16
+# page for mobile devices
