@@ -7,9 +7,11 @@
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">	
 	<link rel="stylesheet" href="css/index_style.css">
+	<script src="js/index.js"></script>
 </head>
 <body>
-	<div class="row-fluid">
+	<!--顶部导航栏-->
+	<div class="row-fluid" id="navtop">
 		<div class="span1" style="display:none"></div>
 		<div class="span1">
 			<a href="#" class="brand">
@@ -20,7 +22,27 @@
 			<img id="logo" src="img/Dian-logo.png">
 		</div>
 	</div>
-	<div class="container"></div>
+	<!--注册登录选择-->	
+	<div class="container-fluid" id="choice">
+		<div class="row-fluid">
+			<div class="span6">
+				<p id="login">登陆</p>
+			</div>
+			<div class="span6">
+				<p id="register">注册</p>
+			</div>
+		</div>
+	</div>
+	<!--登录内容-->
+	<div class="container-fluid" id="loginarea">
+		<p>请输入账号和密码后登陆系统</p>
+		<div class="row-fluid">
+			<div class="span8 offset2">
+				<i class="userinfo"></i>			
+				<input type="text" name="userinfo" placeholder="手机／学号／邮箱">
+			</div>
+		</div>
+	</div>
 	<script src="js/bootstrap.min.js"></script>	
 </body>
 </html>
