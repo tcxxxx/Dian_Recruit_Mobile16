@@ -45,15 +45,23 @@
 	padding-bottom: 25%;
 }
 
-.userinfo {
+.userinfo, .userpwd {
 	width: 20px;
 	height: 20px;
 
 	position: absolute;
 	background-size: 100%;
 	background-repeat: no-repeat;
+}
+
+.userinfo {
 	background-image: 
 		url(../img/loginfo.png);
+}
+
+.userpwd {
+	background-image: 
+		url(../img/pwd.png);
 }
 
 #loginarea input {
