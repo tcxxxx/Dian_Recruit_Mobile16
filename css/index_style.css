@@ -1,0 +1,19 @@
+.row-fluid {
+	background-color: #FFFCF9 !important;	
+
+	vertical-align: middle;
+}
+
+.row-fluid .span4 {
+	text-align: center;
+}
+
+#menu {
+	margin-top: 85%;
+	margin-bottom: 25%; 
+}
+
+#logo {
+	margin-top: 6%;
+	margin-bottom: 6%;
+}
