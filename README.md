@@ -1,1 +1,1 @@
-# page for mobile devices
+### for mobile devices
