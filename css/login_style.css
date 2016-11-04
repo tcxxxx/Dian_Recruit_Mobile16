@@ -3,7 +3,7 @@ body {
 }
 
 #navtop {
-	background-color: #fff;	
+	background-color: #FFFCF9;	
 	vertical-align: middle;
 	padding-bottom: 6px;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 #choice {
-	background-color: #fff;
+	background-color: #FFFCF9;
 	font-size: 20px;
 }
 
@@ -74,6 +74,7 @@ body {
 
 #loginarea input {
 	padding: 0px 0px 10px 30px;
+	width: 100%;
 	outline: none;
 	border-color: transparent;
 	border-radius: 0;
