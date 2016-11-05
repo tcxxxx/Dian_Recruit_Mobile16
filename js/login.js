@@ -19,4 +19,20 @@ $(document).ready(function(){
 		$("#registerarea").css("display","block");
 	})
 
+	$("#confirm_btn").click(function(){
+		$(this).css("background-color","#FB9100")
+			   .css("transition-timing-function","linear");
+		setTimeout(function(){
+			$("#confirm_btn").css("background-color","#FFFCF9");
+		},100);
+	})
+
+	$("#login_btn").click(function(){
+		$(this).css("background-color","#FB9100")
+			   .css("transition-timing-function","linear");
+		setTimeout(function(){
+			$("#login_btn").css("background-color","#FFFCF9");
+		},100);
+	})	
+
 })
