@@ -144,5 +144,8 @@ body {
 	background-color: #FFFCF9;
 	border: 1px solid #FB9100;
 	border-radius: 8px;
+
+	tap-highlight-color:rgba(255,255,255,0);
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
 }
 
