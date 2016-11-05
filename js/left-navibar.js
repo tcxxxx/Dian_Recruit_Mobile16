@@ -19,6 +19,16 @@ $(document).ready(function(){
 		$(".left-navibar li").css("padding-left","0");		
 		$(this).css("border-right","3px solid #FB9100");
 		$(this).css("padding-left","10%");
-		/*页面跳转*/		
+		/*页面跳转*/
+		if( $(this).attr("id") == "page1" )
+			location.href = "index.html"; 	
+		else if( $(this).attr("id") == "page3" )
+			location.href = "process.html"; 	
+		else if( $(this).attr("id") == "page2" )
+			location.href = "groups.html";
+		else if( $(this).attr("id") == "page4" )
+			location.href = "http://dian.hust.edu.cn";
+		else if( $(this).attr("id") == "page5" )
+			location.href = "login.html"; 	 	 				 						
 	})
 })

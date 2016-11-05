@@ -1,0 +1,27 @@
+body {
+	background-color: #FFFCF9;
+}
+
+#navtop {
+	background-color: #FFFCF9;	
+	vertical-align: middle;
+	padding-bottom: 6px;
+}
+
+#top_pos {
+	padding-top: 3%;
+}
+
+.row-fluid .span4 {
+	text-align: center;
+}
+
+#menu {
+	margin-top: 100%;
+	margin-bottom: 25%; 
+}
+
+#logo {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
