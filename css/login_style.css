@@ -163,6 +163,24 @@ body {
 	background-color: #fca733;
 }
 
+#left-navibar-userinfo p {
+	position: relative;
+	top: 45%;
+	left: 20%;
+	color: #fff;
+	font-size: 20px;
+}
+
+.left-navibar li {
+	position: relative;
+
+	font-size: 20px;
+	color: #8F7F74;
+	padding-bottom: 7.5%;
+	padding-top: 7.5%;
+	list-style-type:none;
+}
+
 #left-navibar-items {
 	position: fixed;
 	bottom: 0;

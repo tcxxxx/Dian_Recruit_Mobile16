@@ -40,4 +40,11 @@ $(document).ready(function(){
 	$("#left-navibar-bottom").click(function(){
 		$(".left-navibar").hide("slide",666);
 	})	
+
+	$(".left-navibar li").click(function(){
+		$(".left-navibar li").css("border","none");
+		$(".left-navibar li").css("padding-left","0");		
+		$(this).css("border-right","3px solid #FB9100");
+		$(this).css("padding-left","10%");		
+	})
 })
