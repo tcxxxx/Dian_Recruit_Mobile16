@@ -1,7 +1,4 @@
 $(document).ready(function(){
-	$("#login_btn").click(function(){
-	})
-
 	/* 登录／注册底部 */
 	$("#login").click(function(){
 		$("#login_bottom").css("border-bottom","1px solid #FB9100");
@@ -40,5 +37,7 @@ $(document).ready(function(){
 	$("#menu").click(function(){
 		$(".left-navibar").show("slide",666);
 	})
-
+	$("#left-navibar-bottom").click(function(){
+		$(".left-navibar").hide("slide",666);
+	})	
 })
