@@ -118,3 +118,12 @@
 #input_join.error:-ms-input-placeholder{
     color: #ff5849;/* Internet Explorer 10+ */
 }
+#spSex.error{
+    color: #ff5849;
+}
+#spGrade.error{
+    color: #ff5849;
+}
+#fail_text.error{
+    color: #ff5849;
+}

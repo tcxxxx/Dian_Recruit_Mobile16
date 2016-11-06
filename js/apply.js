@@ -153,6 +153,7 @@ function planEmptyValidate(res) {
 }
 function getInformation() {
     $("#submit").click(function () {
+        removeError();
         var sexes = document.getElementsByName("sex");
         var sex;
         for (var i = 0; i < sexes.length; i++) {
@@ -162,6 +163,7 @@ function getInformation() {
         }
         if (sex == undefined) {
             console.log("性别");
+            $("#spSex").attr("class","error");
         } else {
             count++;
         }
@@ -174,6 +176,8 @@ function getInformation() {
         }
         if (stuGrade == undefined) {
             console.log("年级");
+            $("#spGrade").attr("class","error");
+
         } else {
             count++;
         }
@@ -186,6 +190,7 @@ function getInformation() {
         }
         if (failCourse == undefined) {
             console.log("挂科");
+            $("#fail_text").attr("class","error");
         } else {
             count++;
         }
@@ -212,6 +217,7 @@ function getInformation() {
         console.log(count);
         if (count == 13) {
             console.log(count);
+            removeError();
             sendInformation(applyName, uid, sex, phoneNum, email, major, stuGrade, failCourse, gpa, prize, tech, simpleInfo, future);
         } else {
             count = 0;
@@ -240,7 +246,24 @@ function sendInformation(name, uid, sex, phone, email, major, level, fail_course
         var result = JSON.parse(res);
         var msg = result.msg;
         alert(msg);
+        removeError();
         window.location.href = 'loggedIn.html';
     });
+
+}
+function removeError(){
+    $("#input_name").removeAttr("class","error");
+    $("#input_uid").removeAttr("class","error");
+    $("#input_tel").removeAttr("class","error");
+    $("#input_mail").removeAttr("class","error");
+    $("#input_prizes").removeAttr("class","error");
+    $("#input_tech").removeAttr("class","error");
+    $("#input_join").removeAttr("class","error");
+    $("#input_intro").removeAttr("class","error");
+    $("#input_gpa").removeAttr("class","error");
+    $("#input_major").removeAttr("class","error");
+    $("#spSex").removeAttr("class","error");
+    $("#spGrade").removeAttr("class","error");
+    $("#fail_text").removeAttr("class","error");
 
 }
