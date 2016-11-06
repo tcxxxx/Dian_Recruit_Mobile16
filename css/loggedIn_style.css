@@ -27,7 +27,7 @@
 
 #box_all-night, #box_interview {
 	/**/
-	top: 47%;
+	top: 52%;
 }
 
 .status_box {
@@ -73,6 +73,6 @@
 #result_txt {
 	text-align: center;
 	position: relative;
-	top: 66%;
+	top: 68%;
 	/*color: #FA8A27;*/
 }
