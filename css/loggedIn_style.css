@@ -1,10 +1,12 @@
 #wrapper {
 }
 
-.process_box {
-	display: inline-block;
-	position: fixed;
+#box_line1 {
+}
 
+.process_box {
+	clear: both;
+	display: inline-block;
 	background-color: #FDE7D2;/* pass color*/
 	
 	width:40%;
@@ -13,21 +15,22 @@
 }
 
 #box_apply, #box_all-night {
-	left: 5%;
+	margin-top: 8%;
+	margin-left: 5%;
+	margin-right: 8%;
 }
 
 #box_exam, #box_interview {
-	right: 5%;
+	margin-right: 5%;
 }
 
 #box_apply, #box_exam {
+
 	/**/
-	top: 19%;
 }
 
 #box_all-night, #box_interview {
 	/**/
-	top: 52%;
 }
 
 .status_box {
@@ -68,6 +71,10 @@
 	margin: 0;
 	text-align: center;
 	color: #FA8A27;
+}
+
+#join_hide {
+	color: #FDE7D2;
 }
 
 #result_txt {

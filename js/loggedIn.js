@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	window_width = $(window).width();
 
 	width = $("#box_line1").width();
