@@ -5,11 +5,12 @@ body {
 #navtop {
 	background-color: #FFFCF9;	
 	vertical-align: middle;
-	padding-bottom: 6px;
+    z-index:20;
+    position: relative;
 }
 
 #top_pos {
-	padding-top: 3%;
+/*	padding-top: 10%;*/
 }
 
 .row-fluid .span4 {
