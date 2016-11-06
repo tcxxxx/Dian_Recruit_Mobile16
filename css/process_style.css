@@ -6,12 +6,3 @@
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
-
-#join_logo {
-	width: 30%;
-	height: 15%;
-
-	position: relative;
-	left: 40%;
-	top: 32%; /* IPAD 44% */
-}
