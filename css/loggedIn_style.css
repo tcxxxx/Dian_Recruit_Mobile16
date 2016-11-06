@@ -71,6 +71,7 @@
 	margin: 0;
 	text-align: center;
 	color: #FA8A27;
+	cursor: pointer;
 }
 
 #join_hide {
@@ -82,4 +83,7 @@
 	position: relative;
 	top: 68%;
 	/*color: #FA8A27;*/
+}
+#left-navibar_logout{
+	cursor: pointer;
 }

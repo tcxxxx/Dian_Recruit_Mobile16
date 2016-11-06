@@ -1,4 +1,5 @@
 var startY, removeY;
+var user = sessionStorage.user;
 
 function nextGroup() {
     $('li.group-intr-wrap').each(function(index) {
@@ -7,6 +8,13 @@ function nextGroup() {
             return false;
         }
     });
+    if (user == undefined) {
+        $("#left-navibar_logout").hide();
+    } else {
+        $("#left-navibar_logout").show();
+        $("#left-navibar_login").html(user);
+    }
+    logOut();
 }
 
 function prevGroup() {
@@ -44,3 +52,10 @@ $('#contianer').bind('touchstart', touchStart);
 $('#contianer').bind('touchmove', touchMove);
 $('#contianer').bind('touchend', touchEnd);
 $('#next-group-icon').click(nextGroup);
+function logOut(){
+    $("#left-navibar_logout").click(function(){
+        sessionStorage.user=undefined;
+        window.location.href="login.html";
+        $("#left-navibar_logout").hide();
+    });
+}

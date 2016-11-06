@@ -30,6 +30,7 @@ body {
 	left: 74%;
 	color: #fff;
 	font-size: 15px;
+	cursor: pointer;
 }
 
 .left-navibar ul{
@@ -42,6 +43,7 @@ body {
 	padding-bottom: 7.5%;
 	padding-top: 7.5%;
 	list-style-type:none;
+	cursor: pointer;
 }
 
 #left-navibar-items {
