@@ -2,12 +2,8 @@ body {
 	background-color: #FFFCF9;
 }
 
-#top_pos {
-	background-color: #fff;
-}
-
 #navtop {
-	background-color: #fff;	
+	background-color: #FFFCF9;	
 	vertical-align: middle;
     z-index:20;
     position: relative;
