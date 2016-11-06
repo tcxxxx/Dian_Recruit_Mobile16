@@ -72,5 +72,7 @@
 
 #result_txt {
 	text-align: center;
+	position: relative;
+	top: 66%;
 	/*color: #FA8A27;*/
 }
