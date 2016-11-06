@@ -5,7 +5,9 @@ var wait = 60;
 var errorCode;
 var loginCode;
 $(document).ready(function(){
+/*
     javascript:window.history.forward(1);
+*/
     codeGet();
     register();
     login();
@@ -112,7 +114,7 @@ function checkInfo(num) {
     })
 }
 function register() {
-    $("#").click(function () {
+    $("#confirm_btn").click(function () {
         var account = $("#input_userinfo").val();
         var code = $("#input_vericode").val();
         var pwd = $("#input_setpwd").val();
@@ -150,24 +152,24 @@ function register() {
 function loginValidateError(user, pwd) {
     var count = 0;
     if (user == "") {
-        $("#userId").addClass("error");
+        $("#input_user").addClass("error");
     } else {
         var userBool = isInteger(user);
         if (userBool) {
             count++;
         } else {
-            $("#userId").addClass("error");
+            $("#input_user").addClass("error");
         }
     }
     if (pwd == "") {
-        $("#pwdLogin").addClass("error");
+        $("#input_pwd").addClass("error");
     } else {
         count++;
     }
     if (count == 2) {
         loginCode = true;
-        $("#userId").removeClass("error");
-        $("#pwdLogin").removeClass("error");
+        $("#input_user").removeClass("error");
+        $("#input_pwd").removeClass("error");
     }
 }
 function login() {
