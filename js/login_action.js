@@ -5,9 +5,7 @@ var wait = 60;
 var errorCode;
 var loginCode;
 $(document).ready(function(){
-/*
     javascript:window.history.forward(1);
-*/
     codeGet();
     register();
     login();
@@ -105,10 +103,10 @@ function checkInfo(num) {
         var uid=resultObj.uid;
         if(uid==undefined){
             sessionStorage.user=num;
-            window.location.href="loggedIn.html";
+            window.location.href="apply.html";
         }else{
             sessionStorage.user=num;
-            window.location.href="arrange.html";
+            window.location.href="loggedIn.html";
             sessionStorage.uid=uid;
         }
     })
