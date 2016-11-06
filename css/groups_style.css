@@ -107,7 +107,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 1;
   }
 }
-/* line 18, ../sass/groups_style.scss */
+/* line 19, ../sass/groups_style.scss */
 html {
   width: 100%;
   height: 100%;
@@ -116,14 +116,14 @@ html {
   overflow: hidden;
 }
 
-/* line 25, ../sass/groups_style.scss */
+/* line 27, ../sass/groups_style.scss */
 body {
   width: 100%;
   height: 100%;
   font-size: 0;
 }
 
-/* line 30, ../sass/groups_style.scss */
+/* line 33, ../sass/groups_style.scss */
 .container-fluid {
   width: 100%;
   height: calc(100% - 55px);
@@ -131,7 +131,7 @@ body {
   height: -moz-calc(100% - 55px);
   position: relative;
 }
-/* line 37, ../sass/groups_style.scss */
+/* line 40, ../sass/groups_style.scss */
 .group-hidden {
   -moz-transform: translate(0, -100%);
   -ms-transform: translate(0, -100%);
@@ -141,7 +141,7 @@ body {
   opacity: 0;
 }
 
-/* line 41, ../sass/groups_style.scss */
+/* line 44, ../sass/groups_style.scss */
 .group-intr-wrap {
   width: 100%;
   height: 100%;
@@ -153,77 +153,75 @@ body {
   transition: all 1s ease-in-out 0s;
 }
 
-/* line 47, ../sass/groups_style.scss */
+/* line 50, ../sass/groups_style.scss */
 .mobile-group {
-  background-color: #f7f7f7;
+  background-color: #fff;
   z-index: 7;
 }
 
-/* line 51, ../sass/groups_style.scss */
-.norway-group {
+/* line 54, ../sass/groups_style.scss */
+.xunce-group {
   background-color: #fff2e6;
   z-index: 6;
 }
 
-/* line 55, ../sass/groups_style.scss */
-.xunce-group {
-  background-color: #f7f7f7;
+/* line 58, ../sass/groups_style.scss */
+.weidanmu-group {
+  background-color: #fff;
   z-index: 5;
 }
 
-/* line 59, ../sass/groups_style.scss */
-.meiguo-group {
+/* line 62, ../sass/groups_style.scss */
+.norway-group {
   background-color: #fff2e6;
   z-index: 4;
 }
 
-/* line 63, ../sass/groups_style.scss */
-.weidanmu-group {
-  background-color: #f7f7f7;
+/* line 66, ../sass/groups_style.scss */
+.meiguo-group {
+  background-color: #fff;
   z-index: 3;
 }
 
-/* line 67, ../sass/groups_style.scss */
+/* line 70, ../sass/groups_style.scss */
 .smartSAN-group {
   background-color: #fff2e6;
   z-index: 2;
 }
 
-/* line 71, ../sass/groups_style.scss */
+/* line 74, ../sass/groups_style.scss */
 .huawei-group {
-  background-color: #f7f7f7;
+  background-color: #fff;
   z-index: 1;
 }
 
-/* line 75, ../sass/groups_style.scss */
+/* line 78, ../sass/groups_style.scss */
 .group-intr {
   width: 80%;
   height: 100%;
   margin: 0 auto;
 }
-/* line 80, ../sass/groups_style.scss */
+/* line 83, ../sass/groups_style.scss */
 .img-wrap img {
   width: 100%;
 }
-/* line 84, ../sass/groups_style.scss */
+/* line 87, ../sass/groups_style.scss */
 .group-intr .img-wrap {
   width: 100%;
-  margin: 0 auto;
-  padding: 20px 0;
 }
-/* line 89, ../sass/groups_style.scss */
+/* line 90, ../sass/groups_style.scss */
 .group-intr h1 {
   font-size: 3rem;
   color: #fa8823;
   line-height: 6rem;
 }
-/* line 94, ../sass/groups_style.scss */
+/* line 95, ../sass/groups_style.scss */
 .group-intr h2 {
   margin-top: 1.2rem;
   font-size: 1.4rem;
   color: #7B6B5F;
 }
-/* line 99, ../sass/groups_style.scss */
+/* line 100, ../sass/groups_style.scss */
 .group-intr p {
   text-indent: 2.8rem;
   font-size: 1.4rem;
@@ -231,7 +229,7 @@ body {
   color: #7B6B5F;
 }
 
-/* line 108, ../sass/groups_style.scss */
+/* line 110, ../sass/groups_style.scss */
 .next-icon {
   position: fixed;
   bottom: 1rem;
