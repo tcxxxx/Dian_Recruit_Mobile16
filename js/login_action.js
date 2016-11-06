@@ -9,7 +9,6 @@ $(document).ready(function(){
     codeGet();
     register();
     login();
-    backspace();
 });
 function codeGet() {
     $("#getCode").click(function () {
@@ -113,7 +112,7 @@ function checkInfo(num) {
     })
 }
 function register() {
-    $("#registerBtn").click(function () {
+    $("#").click(function () {
         var account = $("#input_userinfo").val();
         var code = $("#input_vericode").val();
         var pwd = $("#input_setpwd").val();
@@ -194,25 +193,5 @@ function login() {
         }
     });
 }
-function backspace() {
 
-    if (event.keyCode == 8 && event.srcElement.tagName != "INPUT" && event.srcElement.type != "text")
-
-        event.returnValue = false;
-
-}
-
-if (navigator.appName == "Microsoft Internet Explorer") {
-
-    window.history.forward(1);
-
-}
-
-else // if it is Mozilla than
-
-{
-
-    window.history.forward(-1);
-
-}
 
