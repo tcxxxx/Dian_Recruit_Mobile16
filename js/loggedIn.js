@@ -4,4 +4,5 @@ $(document).ready(function(){
 
 	height = $(".process_box").width();
 	$(".process_box").css("height",height);
+
 })
