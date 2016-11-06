@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>#</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">	
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">	
+	<link rel="stylesheet" href="css/left-navibar_style.css">		
+	<link rel="stylesheet" href="css/index_style.css">
+	<link rel="stylesheet" href="css/loggedIn_style.css">	
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/left-navibar.js"></script>
+	<script src="js/loggedIn.js"></script>
+</head>
+<body>
+<!--页名-->
+	<div id="pagename" style="display:none">page0</div>
+	<!--左侧导航栏-->
+	<div class="left-navibar" id="left-navibar-userinfo">
+		<p>未登录</p>
+	</div>	
+	<div class="left-navibar" id="left-navibar-bottom">
+	</div>
+	<div class="left-navibar" id="left-navibar-items">
+	<ul>
+		<li id="page1">首页</li>
+		<li id="page2">项目组介绍</li>
+		<li id="page3">招新流程</li>
+		<li id="page4">了解Dian</li>
+		<li id="page5">加入我们</li>
+	</ul>
+	</div>
+	<!--左侧导航栏 结束-->
+	<div id="top_pos"></div>	
+	<!--顶部导航栏-->
+	<div class="row-fluid" id="navtop">
+		<div class="span1" style="display:none"></div>
+		<div class="span1">
+			<a href="#" class="brand">
+				<img id="menu" src="img/menu.png">
+			</a>
+		</div>
+		<div class="span4 offset3">
+			<img id="logo" src="img/Dian-logo.png">
+		</div>
+	</div>	
+	<!--顶部导航栏 结束-->	
+	<!--流程部分-->
+	<div class="container-fluid" id="wrapper">
+		<!--第一行-->
+		<div class="row-fluid" id="box_line1"> 
+			<div id="box_apply" class="process_box">
+				<div class="status_box" id="apply_status">
+					<p id="apply_txt">已通过</p>
+				</div>
+				<p class="process_content">网申</p>
+				<p class="time_txt">截止时间:<br>2016.11.13 24:00</p>
+				<p id="join_txt">点击此处报名</p>
+			</div>
+			<div id="box_exam" class="process_box">
+				<div class="status_box" id="process_status">
+					<p id="exam_txt">已通过</p>
+				</div>
+				<p class="process_content">笔试</p>
+				<p class="time_txt">时间: 11.14 19:00<br>地点：启明学院亮胜楼401</p>				
+				<p></p>
+			</div>
+		</div>
+		<div class="row-fluid" id="interval">
+		</div>
+		<!--第二行-->		
+		<div class="row-fluid" id="box_line2">
+			<div id="box_interview" class="process_box">
+				<div class="status_box">
+					<p id="interview_txt">已通过</p>
+				</div>
+				<p class="process_content">面试</p>
+				<p class="time_txt">时间: 11.14 19:00<br>地点：启明学院亮胜楼401</p>					
+			</div>
+			<div id="box_all-night" class="process_box">
+				<div class="status_box">
+					<p id="all-night_txt">已通过</p>
+				</div>
+				<p class="process_content">通宵测试</p>
+				<p class="time_txt">时间: 11.14 19:00<br>地点：启明学院亮胜楼401</p>					
+			</div>
+		</div>
+	</div>
+	<!--流程部分 结束-->	
+
+
+</body>
