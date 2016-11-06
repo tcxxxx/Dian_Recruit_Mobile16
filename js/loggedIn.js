@@ -10,4 +10,5 @@ $(document).ready(function(){
 		$(".process_box").css("height",height);
 	else
 		$(".process_box").css("height",0.6*height);		
+
 })

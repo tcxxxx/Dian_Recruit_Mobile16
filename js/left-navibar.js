@@ -31,8 +31,4 @@ $(document).ready(function(){
 		else if( $(this).attr("id") == "page5" )
 			location.href = "login.html"; 	 	 				 						
 	})
-
-	$("#left-navibar-userinfo").click(function(){
-		location.href = "login.html";
-	})
 })

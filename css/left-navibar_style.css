@@ -16,13 +16,22 @@ body {
 	background-color: #fca733;
 }
 
-#left-navibar-userinfo p {
+#left-navibar_login {
 	position: relative;
 	top: 45%;
 	left: 20%;
 	color: #fff;
 	font-size: 20px;
 }
+
+#left-navibar_logout {
+	position: relative;
+	top: 62%;
+	left: 74%;
+	color: #fff;
+	font-size: 15px;
+}
+
 .left-navibar ul{
 	margin-left:25px;
 }
