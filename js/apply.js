@@ -1,7 +1,7 @@
-var count;
+var count=0;
+var ifValidate;
 $(document).ready(function () {
     getInformation();
-
 });
 
 function isPhone(obj) {
@@ -9,16 +9,32 @@ function isPhone(obj) {
     var flag = reg.test(obj); //true
     return flag;
 }
-function isName(obj) {
-    var reg = / [\u4e00-\u9fa5] /;
+function isChinese(obj) {
+    var reg = /[\u4e00-\u9fa5]/;
     var flag = reg.test(obj);
     return flag;
 }
-function nameValidate(username) {
-    if (username == "") {
-        console.log("姓名不能为空");
+function isStuId(obj) {
+    var reg = /[Uu]\d{9}/;
+    var flag = reg.test(obj);
+    return flag;
+}
+function isMail(obj) {
+    var reg = /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/;
+    var flag = reg.test(obj);
+    return flag;
+}
+function isGpa(obj) {
+    var reg = /^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$|^[1-9]\d*$/;
+    var flag = reg.test(obj);
+    return flag;
+}
+
+function chineseValidate(chinese) {
+    if (chinese == "") {
+        console.log("该字段不能为空");
     } else {
-        var nameBool = isName(username);
+        var nameBool = isChinese(chinese);
         if (nameBool) {
             count++;
         } else {
@@ -26,6 +42,62 @@ function nameValidate(username) {
         }
     }
 }
+function phoneValidate(phoneNum) {
+    if (phoneNum == "") {
+        console.log("手机号不能为空");
+    } else {
+        var phBool = isPhone(phoneNum);
+        if (phBool) {
+            count++;
+        } else {
+            alert("手机号不对")
+        }
+    }
+}
+function stuIdValidate(stuid) {
+    if (stuid == "") {
+        console.log("学号不能为空");
+    } else {
+        var stuBool = isStuId(stuid);
+        if (stuBool) {
+            count++;
+        } else {
+            alert("学号格式不对");
+        }
+    }
+}
+function emailValidate(mail) {
+    if (mail == "") {
+        console.log("邮箱不能为空");
+    } else {
+        var mailBool = isMail(mail);
+        if (mailBool) {
+            count++;
+        } else {
+            alert("邮件不对");
+        }
+    }
+}
+function gpaValidate(gpa) {
+    if (gpa == "") {
+        console.log("gpa不能为空");
+    } else {
+        var gpaBool = isGpa(gpa);
+        if (gpaBool) {
+            count++;
+        } else {
+            alert("gpa格式");
+        }
+    }
+}
+function emptyValidate(res) {
+    if (res == "") {
+        console.log("该字段不能为空")
+    } else {
+        count++;
+    }
+}
+
 function getInformation() {
     $("#submit").click(function () {
         var sexes = document.getElementsByName("sex");
@@ -35,12 +107,22 @@ function getInformation() {
                 sex = sexes[i].value;
             }
         }
+        if(sex==undefined){
+            console.log("性别");
+        }else{
+            count++;
+        }
         var grades = document.getElementsByName("grade");
         var stuGrade;
         for (var k = 0; k < grades.length; k++) {
             if (grades[k].checked) {
                 stuGrade = grades[k].value;
             }
+        }
+        if(stuGrade==undefined){
+            console.log("年级");
+        }else{
+            count++;
         }
         var failNum = document.getElementsByName("failure");
         var failCourse;
@@ -49,18 +131,40 @@ function getInformation() {
                 failCourse = failNum[j].value;
             }
         }
+        if(failCourse==undefined){
+            console.log("挂科");
+        }else{
+            count++;
+        }
         var phoneNum = $("#input_tel").val();
+        phoneValidate(phoneNum);
         var applyName = $("#input_name").val();
-        nameValidate(applyName);
+        chineseValidate(applyName);
         var uid = $("#input_uid").val();
+        stuIdValidate(uid);
         var email = $("#input_mail").val();
+        emailValidate(email);
         var major = $("#input_major").val();
+        chineseValidate(major);
         var gpa = $("#input_gpa").val();
+        gpaValidate(gpa);
         var prize = $("#input_prizes").val();
+        emptyValidate(prize);
         var tech = $("#input_tech").val();
+        emptyValidate(tech);
         var simpleInfo = $("#input_intro").val();
+        emptyValidate(simpleInfo);
         var future = $("#input_join").val();
-        sendInformation(applyName, uid, sex, phoneNum, email, major, stuGrade, failCourse, gpa, prize, tech, simpleInfo, future);
+        emptyValidate(future);
+        console.log(count);
+        if(count==13){
+            console.log(count);
+            sendInformation(applyName, uid, sex, phoneNum, email, major, stuGrade, failCourse, gpa, prize, tech, simpleInfo, future);
+        }else{
+            count=0;
+            console.log(count);
+
+        }
     });
 }
 function sendInformation(name, uid, sex, phone, email, major, level, fail_course, score, champion, skills, featueres, plan) {
@@ -79,6 +183,7 @@ function sendInformation(name, uid, sex, phone, email, major, level, fail_course
         "features": featueres,
         "plan": plan
     }, function (res) {
+        count=0;
         var result = JSON.parse(res);
         var msg = result.msg;
         alert(msg);
