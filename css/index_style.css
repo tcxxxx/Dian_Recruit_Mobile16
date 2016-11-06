@@ -2,8 +2,12 @@ body {
 	background-color: #FFFCF9;
 }
 
+#top_pos {
+	background-color: #fff;
+}
+
 #navtop {
-	background-color: #FFFCF9;	
+	background-color: #fff;	
 	vertical-align: middle;
 	padding-bottom: 6px;
 }
