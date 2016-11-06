@@ -11,11 +11,13 @@
 	<link rel="stylesheet" href="css/index_style.css">	
 	<link rel="stylesheet" href="css/login_style.css">
 	<link rel="stylesheet" href="css/left-navibar_style.css">
+	<link rel="stylesheet" href="css/login_error_style.css">
 	<script src="js/jquery-3.1.1.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>	
 	<script src="js/login_css.js"></script>
 	<script src="js/left-navibar.js"></script>
+	<script src="js/login_action.js"></script>
 </head>
 <body>
 	<!--页名-->
@@ -71,7 +73,7 @@
 		<div class="row-fluid">
 			<div class="span8 offset2">
 				<i class="userinfo"></i>			
-				<input type="text" name="userinfo" placeholder="手机／学号／邮箱" id="input_user">
+				<input type="text" name="userinfo" placeholder="手机" id="input_user">
 			</div>
 		<!--调整行间距-->	
 		<div class="row-fluid">
@@ -115,7 +117,7 @@
 				<!--输入验证码-->
 				<i class="userveri"></i>		
 				<input type="text" name="vericode" placeholder="请输入验证码" id="input_vericode" style="border-bottom:none">
-				<button id="getcode">获取验证码</button>
+				<button id="getCode">获取验证码</button>
 			</div>
 		</div>
 		<div class="row-fluid">
