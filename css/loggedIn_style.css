@@ -3,7 +3,14 @@
 
 #box_line1 {
 }
-
+.img-wrap{
+    height:35px;
+    text-align:center;
+    padding-top: 20px;
+}
+.img-wrap img{
+    height:100%;
+}
 .process_box {
     clear: both;
     display: inline-block;
