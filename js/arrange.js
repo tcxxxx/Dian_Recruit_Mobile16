@@ -27,6 +27,7 @@ var lqStatus;
 
 $(document).ready(function () {
     $("body").hide();
+    $("#result_txt").hide();
     if (user == undefined) {
         $("#left-navibar_logout").hide();
         window.location.href="login.html";
@@ -265,13 +266,13 @@ function putStatus() {
     switch (lqStatus) {
         case 0:
             lq = "未开始";
-            $("#passStatus").attr("class", "unstart");
+
             break;
         case 1:
-            lq = "录取";
-            $("#passStatus").attr("class", "lq");
+            lq = "恭喜同学，成功录取";
+            $("#result_txt").html(lq);
+            $("#result_txt").show();
             break;
 
     }
-    $("#passStatus").html(lq);
 }
