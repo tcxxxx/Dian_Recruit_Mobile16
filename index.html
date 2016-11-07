@@ -1,51 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn-Hans">
 <head>
-	<title>首页</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">	
-	<link rel="stylesheet" href="css/jquery-ui.min.css">
-	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">	
-	<link rel="stylesheet" href="css/left-navibar_style.css">		
-	<link rel="stylesheet" href="css/index_style.css">
+	<title>Dian团队2016冬季招新</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">	
+	<meta charset="utf-8">	
+	<link rel="stylesheet" href="stylesheets/index_style.css">
 </head>
 <body>
-<!--页名-->
-	<div id="pagename" style="display:none">page1</div>
-	<!--左侧导航栏-->
-	<div class="left-navibar" id="left-navibar-userinfo">
-		<p id="left-navibar_login">未登录</p>
-		<p id="left-navibar_logout">退出</p>		
-	</div>	
-	<div class="left-navibar" id="left-navibar-bottom">
-	</div>
-	<div class="left-navibar" id="left-navibar-items">
-	<ul>
-		<li id="page1">首页</li>
-		<li id="page2">项目组介绍</li>
-		<li id="page3">招新流程</li>
-		<li id="page4">了解Dian</li>
-		<li id="page5">加入我们</li>
+	<ul class="container" id="container">
+		<li class="img-wrap home-page page-wrap">
+			<video src="img/homepage.mov" autoplay="autoplay" width="100%" height="100%" loop="loop" class="img-wrap">
+				<img src="img/homepage.jpg" alt="">
+			</video>
+			<div class="next-button"><img src="img/next_icon.png" alt="下一页"></div>
+		</li>
+		<li class="group-content group-intr page-wrap">
+			<ul class="circle-wrap" id="circle-wrap">
+				<li class="circle circle-active"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+			</ul>
+			<div class="group-advice img-wrap"><img src="img/advice.png" alt=""></div>
+			<ul class="group-container" id="group-container">
+				<li class="group-wrap img-wrap mobile-group"><img src="img/mobile.png" alt="移动组"></li>
+				<li class="group-wrap img-wrap xunce-group"><img src="img/xunce.png" alt="迅测组"></li>
+				<li class="group-wrap img-wrap weidanmu-group"><img src="img/weidanmu.png" alt="微弹幕组"></li>
+				<li class="group-wrap img-wrap norway-group"><img src="img/norway.png" alt="挪威组"></li>
+				<li class="group-wrap img-wrap meiguo-group"><img src="img/meiguo.png" alt="魅果科技组"></li>
+				<li class="group-wrap img-wrap smartSAN-group"><img src="img/smartSAN.png" alt="华三组"></li>
+				<li class="group-wrap img-wrap huawei-group"><img src="img/huawei.png" alt="华为组"></li>
+			</ul>
+			<div class="next-button"><img src="img/next_icon.png" alt="下一页"></div>
+		</li>
+		<li class="img-wrap process-intr page-wrap">
+			<div title="加入Dian" class="liucheng-wrap"><img src="img/liucheng.png" alt="流程图"></div>
+		</li>
 	</ul>
-	</div>
-	<!--左侧导航栏 结束-->
-	<div id="top_pos"></div>	
-	<!--顶部导航栏-->
-	<div class="row-fluid" id="navtop">
-		<div class="span1" style="display:none"></div>
-		<div class="span1">
-			<a href="#" class="brand">
-				<img id="menu" src="img/menu.png">
-			</a>
-		</div>
-		<div class="span4 offset3">
-			<img id="logo" src="img/Dian-logo.png">
-		</div>
-	</div>	
-	<script src="js/jquery-3.1.1.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>	
-	<script src="js/left-navibar.js"></script>	
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
