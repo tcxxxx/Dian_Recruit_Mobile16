@@ -1,7 +1,10 @@
 var count = 0;
 var ifValidate;
+var user = sessionStorage.user;
+
 $(document).ready(function () {
     getInformation();
+    getInfo(user);
 });
 
 function isPhone(obj) {
@@ -242,6 +245,7 @@ function sendInformation(name, uid, sex, phone, email, major, level, fail_course
         "features": featueres,
         "plan": plan
     }, function (res) {
+        sessionStorage.uid=uid;
         count = 0;
         var result = JSON.parse(res);
         var msg = result.msg;
@@ -265,5 +269,58 @@ function removeError(){
     $("#spSex").removeAttr("class","error");
     $("#spGrade").removeAttr("class","error");
     $("#fail_text").removeAttr("class","error");
+
+}
+function getInfo(num) {
+    $.post("http://120.76.117.125:90/user/getuserbyph", {
+        "phone": num
+    }, function (res) {
+        var resObj = JSON.parse(res);
+        stuId = resObj.uid;
+        applyName = resObj.name;
+        applyPh = resObj.phone;
+        level = resObj.level;
+        gpa = resObj.score;
+        failC = resObj.fail_course;
+        tech = resObj.skills;
+        cv = resObj.features;
+        plan = resObj.plan;
+        sex = resObj.sex;
+        apEmail = resObj.email;
+        apMajor = resObj.major;
+        prize = resObj.champion;
+        putInfo(stuId, applyName, applyPh, level, gpa, failC, tech, cv, plan, sex, apEmail, apMajor, prize);
+    });
+
+}
+function putInfo(stuId, apName, apPh, level, gpa, failC, tech, cv, plan, sex, apEmail, apMajor, prize) {
+    $("#input_name").val(apName);
+    $("#input_uid").val(stuId);
+    $("#input_tel").val(apPh);
+    $("#input_mail").val(apEmail);
+    $("#input_major").val(apMajor);
+    $("#input_gpa").val(gpa);
+    $("#input_prizes").val(prize);
+    $("#input_tech").val(tech);
+    $("#input_intro").val(cv);
+    $("#input_join").val(plan);
+    var sexChecks = document.getElementsByName("sex");
+    for (var i = 0; i < sexChecks.length; i++) {
+        if (i == sex) {
+            $(sexChecks[i]).attr('checked', 'checked');
+        }
+    }
+    var grades = document.getElementsByName("grade");
+    for (var k = 0; k < grades.length; k++) {
+        if (grades[k].value == level) {
+            $(grades[k]).attr('checked', 'checked');
+        }
+    }
+    var fails = document.getElementsByName("failure");
+    for (var j = 0; j < fails.length; j++) {
+        if (j == failC) {
+            $(fails[j]).attr('checked', 'checked');
+        }
+    }
 
 }
