@@ -26,12 +26,14 @@ var lqStatus;
 
 
 $(document).ready(function () {
-
+    $("body").hide();
     if (user == undefined) {
         $("#left-navibar_logout").hide();
+        window.location.href="login.html";
     } else {
         $("#left-navibar_logout").show();
         $("#left-navibar_login").html(user);
+        $("body").show();
         getInfo(user);
         checkStatus(uid);
     }
@@ -43,25 +45,13 @@ $(document).ready(function () {
             getInfo(user);
         }
         window.location.href = "apply.html";
-
     });
 
-    /*
-     webClock();
-     */
+    webClock();
     logOut();
 
 
 });
-function webClock() {
-    var nowTime = getSeverTime();
-    var now1 = new Date(nowTime);
-    var s1 = now1.getTime();
-    console.log(s1);
-    var endjl = new Date("2016/11/12 00:00")
-
-
-}
 function getSeverTime() {
     var xmlHttp = new XMLHttpRequest();
     if (!xmlHttp) {
@@ -72,6 +62,39 @@ function getSeverTime() {
     var severTime = new Date(xmlHttp.getResponseHeader("Date"));
     return severTime;
 }
+function webClock() {
+    var nowTime = getSeverTime();
+    var now1 = new Date(nowTime);
+    var s1 = now1.getTime();
+    var endjl = new Date("2016/11/12 00:00");
+    var sjl = endjl.getTime();
+    var t1 = sjl - s1;
+    var endbs=new Date("2016/11/16 00:00");
+    var sbs=endbs.getTime();
+    var t2=sbs-s1;
+    var endms=new Date("2016/11/17 00:00");
+    var sms=endms.getTime();
+    var t3=sms-s1;
+    var endtxcs=new Date("2016/11/19 00:00");
+    var stxcs=endtxcs.getTime();
+    var t4=stxcs-s1;
+    if (t1 < 0) {
+        $("#box_apply").css("background-color","#fde7d2");
+
+    }
+    if(t2<0){
+        $("#box_exam").css("background-color","#fde7d2");
+        $("#join_hide").css("background-color","#fde7d2");
+
+    }
+    if(t3<0){
+        $("#box_interview").css("background-color","#fde7d2");
+    }
+    if(t4<0){
+        $("#box_all-night").css("background-color","#fde7d2");
+    }
+}
+
 function logOut() {
     $("#left-navibar_logout").click(function () {
         sessionStorage.user = undefined;

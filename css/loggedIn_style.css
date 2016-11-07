@@ -7,8 +7,7 @@
 .process_box {
     clear: both;
     display: inline-block;
-    background-color: #FDE7D2; /* pass color*/
-
+    background-color: #dfddda; /* unstart color*/
     width: 40%;
     box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.12);
     border-radius: 10px;
@@ -64,7 +63,7 @@
 }
 
 #join_hide {
-    color: #FDE7D2;
+    color: #dfddda;
 }
 
 #result_txt {

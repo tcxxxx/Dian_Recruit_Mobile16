@@ -3,6 +3,14 @@ var ifValidate;
 var user = sessionStorage.user;
 
 $(document).ready(function () {
+
+    $("body").hide();
+    if(user==undefined){
+        window.location.href="login.html";
+    }else{
+        $("body").show();
+    }
+
     getInformation();
     getInfo(user);
 });
