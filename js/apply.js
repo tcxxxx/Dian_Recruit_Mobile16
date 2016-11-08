@@ -1,20 +1,32 @@
 var count = 0;
-var ifValidate;
+var gpa_2016 = 2016;
 var user = sessionStorage.user;
 
 $(document).ready(function () {
 
     $("body").hide();
-    if(user==undefined){
-        window.location.href="login.html";
-    }else{
+    if (user == undefined) {
+        window.location.href = "login.html";
+    } else {
         $("body").show();
     }
 
     getInformation();
     getInfo(user);
+    check_2016();
 });
 
+function check_2016(){
+    $("#input_grade_16").click(function(){
+        gpa_2016 = 100;
+        $("#input_gpa").attr("disabled", "disabled");
+        $("#current_gpa").css("color","#cccccc");
+        $("#input_gpa").css("border","0.1rem solid #cccccc");
+        $("#input_gpa").css("color","#cccccc");
+
+    });
+
+}
 function isPhone(obj) {
     var reg = /^1[3|4|5|7|8][0-9]{9}$/; //验证规则
     var flag = reg.test(obj); //true
@@ -174,7 +186,7 @@ function getInformation() {
         }
         if (sex == undefined) {
             console.log("性别");
-            $("#spSex").attr("class","error");
+            $("#spSex").attr("class", "error");
         } else {
             count++;
         }
@@ -187,7 +199,7 @@ function getInformation() {
         }
         if (stuGrade == undefined) {
             console.log("年级");
-            $("#spGrade").attr("class","error");
+            $("#spGrade").attr("class", "error");
 
         } else {
             count++;
@@ -201,7 +213,7 @@ function getInformation() {
         }
         if (failCourse == undefined) {
             console.log("挂科");
-            $("#fail_text").attr("class","error");
+            $("#fail_text").attr("class", "error");
         } else {
             count++;
         }
@@ -215,8 +227,15 @@ function getInformation() {
         emailValidate(email);
         var major = $("#input_major").val();
         majorValidate(major);
-        var gpa = $("#input_gpa").val();
-        gpaValidate(gpa);
+        var gpa ;
+        if (gpa_2016 == 2016) {
+            gpa = $("#input_gpa").val();
+            gpaValidate(gpa);
+        } else {
+            gpa=gpa_2016;
+            console.log(gpa);
+        }
+
         var prize = $("#input_prizes").val();
         prizeEmptyValidate(prize);
         var tech = $("#input_tech").val();
@@ -253,7 +272,7 @@ function sendInformation(name, uid, sex, phone, email, major, level, fail_course
         "features": featueres,
         "plan": plan
     }, function (res) {
-        sessionStorage.uid=uid;
+        sessionStorage.uid = uid;
         count = 0;
         var result = JSON.parse(res);
         var msg = result.msg;
@@ -263,20 +282,20 @@ function sendInformation(name, uid, sex, phone, email, major, level, fail_course
     });
 
 }
-function removeError(){
-    $("#input_name").removeAttr("class","error");
-    $("#input_uid").removeAttr("class","error");
-    $("#input_tel").removeAttr("class","error");
-    $("#input_mail").removeAttr("class","error");
-    $("#input_prizes").removeAttr("class","error");
-    $("#input_tech").removeAttr("class","error");
-    $("#input_join").removeAttr("class","error");
-    $("#input_intro").removeAttr("class","error");
-    $("#input_gpa").removeAttr("class","error");
-    $("#input_major").removeAttr("class","error");
-    $("#spSex").removeAttr("class","error");
-    $("#spGrade").removeAttr("class","error");
-    $("#fail_text").removeAttr("class","error");
+function removeError() {
+    $("#input_name").removeAttr("class", "error");
+    $("#input_uid").removeAttr("class", "error");
+    $("#input_tel").removeAttr("class", "error");
+    $("#input_mail").removeAttr("class", "error");
+    $("#input_prizes").removeAttr("class", "error");
+    $("#input_tech").removeAttr("class", "error");
+    $("#input_join").removeAttr("class", "error");
+    $("#input_intro").removeAttr("class", "error");
+    $("#input_gpa").removeAttr("class", "error");
+    $("#input_major").removeAttr("class", "error");
+    $("#spSex").removeAttr("class", "error");
+    $("#spGrade").removeAttr("class", "error");
+    $("#fail_text").removeAttr("class", "error");
 
 }
 function getInfo(num) {
@@ -302,6 +321,16 @@ function getInfo(num) {
 
 }
 function putInfo(stuId, apName, apPh, level, gpa, failC, tech, cv, plan, sex, apEmail, apMajor, prize) {
+
+    var check_level=Number(level);
+
+    if(check_level==2016){
+        $("#input_gpa").attr("disabled", "disabled");
+        $("#current_gpa").css("color","#cccccc");
+        $("#input_gpa").css("border","0.1rem solid #cccccc");
+        $("#input_gpa").css("color","#cccccc");
+
+    }
     $("#input_name").val(apName);
     $("#input_uid").val(stuId);
     $("#input_tel").val(apPh);
@@ -322,6 +351,7 @@ function putInfo(stuId, apName, apPh, level, gpa, failC, tech, cv, plan, sex, ap
     for (var k = 0; k < grades.length; k++) {
         if (grades[k].value == level) {
             $(grades[k]).attr('checked', 'checked');
+
         }
     }
     var fails = document.getElementsByName("failure");
